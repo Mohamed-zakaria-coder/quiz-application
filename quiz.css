@@ -73,6 +73,15 @@
     border: none;
 
 }
+.spans-parent span{
+    width: 20px;
+    height:20px;
+    background-color: #eee;
+    margin-right: 4px;
+
+    border-radius: 50%;
+    display: inline-flex
+}
 @keyframes show{
     0%, 50%{
         opacity: 0;
