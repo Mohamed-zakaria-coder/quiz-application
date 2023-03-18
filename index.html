@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./quiz.css" />
+    <title>Quiz Application</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="quiz-container">
+        <div class="category-count">
+          <div class="category"></div>
+          <div class="questions-number"></div>
+        </div>
+        <div class="quiz">
+          <h2 class="quiz-question"></h2>
+          <div class="quiz-answers">
+            <div>
+              <input type="radio" id="q1" name="q" checked />
+              <label for="q1" class="wrong"> </label>
+            </div>
+            <div>
+              <input type="radio" id="q2" name="q" />
+              <label for="q2" class="wrong"> </label>
+            </div>
+            <div>
+              <input type="radio" id="q3" name="q" />
+              <label for="q3" class="wrong"> </label>
+            </div>
+            <div>
+              <input type="radio" id="q4" name="q" />
+              <label for="q4" class="wrong right"> </label>
+            </div>
+
+          </div>
+        </div>
+        <div class="correctly">
+
+        </div>
+        <button class="submit-answer">Submit Answer</button>
+        <div class="spans-count">
+          <div class="spans-parent"></div>
+          <div class="countdown"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./quiz.js"></script>
+  </body>
+</html>
