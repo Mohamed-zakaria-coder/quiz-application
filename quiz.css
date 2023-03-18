@@ -1,3 +1,6 @@
+.page{
+    animation: show 1.5s linear;
+}
 .quiz-container {
     width: 600px;
     margin: 20px auto;
@@ -69,4 +72,12 @@
     background-color: #1caed6;
     border: none;
 
+}
+@keyframes show{
+    0%, 50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

@@ -7,17 +7,27 @@ let label = document.querySelectorAll(".wrong");
 let inputs = document.querySelectorAll("input");
 let quiz = document.querySelector(".quiz");
 let correctly = document.querySelector(".correctly");
+let page = document.querySelector(".page");
 
 let index = 0;
 let points = 0;
-
+page.style.cssText = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"
+page.style.display = "none";
 let checkedInput;
-
+let loading = document.createElement("h2");
+loading.textContent = "Loading..."
+loading.style.cssText = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"
+document.body.appendChild(loading)
 fetch(
   "https://the-trivia-api.com/api/questions?categories=sport_and_leisure&limit=5"
 )
   .then((res) => res.json())
   .then((data) => {
+    if(!data){
+    }
+    else{
+      loading.style.display = "none";
+      page.style.display = "block";
     function Quiz() {
       let myArr = [];
       console.log(data);
@@ -73,4 +83,5 @@ fetch(
         }
       }
     });
+  }
   });
