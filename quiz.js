@@ -9,10 +9,12 @@ let quiz = document.querySelector(".quiz");
 let correctly = document.querySelector(".correctly");
 let page = document.querySelector(".page");
 let spansParent = document.querySelector(".spans-parent");
-let countdown = document.querySelector("countdown");
+let countdown =  document.querySelector(".countdown");
+let countDownSpan = document.querySelector(".countdown span");
 
 let index = 0;
 let points = 0;
+countDownSpan.innerHTML = "12.00";
 page.style.cssText =
   "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)";
 page.style.display = "none";
@@ -31,20 +33,35 @@ fetch(
     } else {
       loading.style.display = "none";
       page.style.display = "block";
+      function countDown (){
+        countDownSpan.innerHTML -= 1;
 
+        if (countDownSpan.innerHTML === "0") {
+          submitBtn.click();
+          countDownSpan.innerHTML = 10
+          if(index === data.length){
+            clearInterval(countDownText)
+            countdown.remove()
+          }
+        }
+      
+      };
+      let countDownText = setInterval(countDown, 1000)
+     
       for (let i = 0; i < data.length; i++) {
         spans = document.createElement("span");
 
         spansParent.appendChild(spans);
       }
       function Quiz() {
+        
         let myArr = [];
-        console.log(data);
         inputs.forEach((input) => {
           input.checked ? (checkedInput = input) : "";
         });
         let randomNumber = Math.floor(Math.random() * 3);
         if (data[index]) {
+          console.log(data[index].correctAnswer)
           for (let i = 0; i <= 2; i++) {
             myArr.push(
               (label[i].textContent = data[index].incorrectAnswers[i])
@@ -58,7 +75,7 @@ fetch(
           category.textContent = "Category: " + data[index].category;
 
           quizQuestion.textContent = data[index].question;
-          console.log(data[index].correctAnswer);
+          quizQuestion.style.lineHeight = "1.2";
 
           let allSpans = document.querySelectorAll(".spans-parent span");
 
@@ -70,6 +87,7 @@ fetch(
         }
       }
       Quiz();
+      countDown();
       submitBtn.addEventListener("click", () => {
         if (index < data.length) {
           inputs.forEach((input) => {
@@ -78,17 +96,21 @@ fetch(
           if (
             checkedInput.nextElementSibling.textContent ===
             data[index].correctAnswer
-          ) {
-            points++;
-          }
+            ) {
+              points++;
+            }
+            inputs[0].checked = true
           index++;
           Quiz();
-          console.log(index);
-          console.log(points);
+          countDownSpan.innerHTML = 10
+          if(index === data.length){
+            countdown.remove()
+          }
           if (index === data.length) {
             quizAnswer.remove();
             quizQuestion.remove();
             submitBtn.remove();
+            spansParent.remove();
             correctly.textContent = `You Have Answered ${points} Question${
               points > 1 ? "s" : ""
             } Correctly`;
@@ -102,8 +124,5 @@ fetch(
           }
         }
       });
-      function CountDown(){
-        
-      }
     }
   });

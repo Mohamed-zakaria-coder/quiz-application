@@ -5,8 +5,22 @@
     width: 600px;
     margin: 20px auto;
     background-color: #eee;
-    min-height: 400px;
     padding: 20px;
+}
+@media(max-width: 767px){
+    .quiz-container{
+       max-width: 400px;
+    }
+}
+@media(max-width: 480px){
+    .quiz-container{
+       max-width: 300px;
+    }
+}
+@media(max-width: 350px){
+    .quiz-container{
+       max-width: 200px;
+    }
 }
 
 .quiz-container .category-count {
@@ -41,6 +55,7 @@
     align-items: center;
     background-color: white;
     padding: 10px;
+    justify-content: space-between;
 }
 
 .quiz-container .quiz-answers {
@@ -81,6 +96,9 @@
 
     border-radius: 50%;
     display: inline-flex
+}
+.countdown{
+    font-size: 30px;
 }
 @keyframes show{
     0%, 50%{
