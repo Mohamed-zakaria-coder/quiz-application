@@ -100,6 +100,34 @@
 .countdown{
     font-size: 30px;
 }
+.start-pageP{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.start-page .start-quiz{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    background-color: #1caed6;
+    color: white;
+    padding: 20px 30px;
+    font-size: 25px;
+}
+.start-page .top-svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.start-page .bottom-svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 @keyframes show{
     0%, 50%{
         opacity: 0;
