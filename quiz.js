@@ -21,8 +21,9 @@ page.style.display = "none";
 let checkedInput;
 let loading = document.createElement("h2");
 loading.textContent = "Loading...";
+loading.className = "loading"
 loading.style.cssText =
-  "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)";
+  "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 5px 10px; color:white; font-size: 24px;";
 document.body.appendChild(loading);
 fetch(
   "https://the-trivia-api.com/api/questions?categories=sport_and_leisure&limit=5"

@@ -124,7 +124,24 @@
     bottom: 0;
     left: 0;
 }
-
+/* Start Loading */
+.loading{
+    mix-blend-mode: difference;
+    background-color: #ddd;
+}
+.loading::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: move-right linear 2s infinite;
+}
+/* End Loading */
+/* Start Animation */
 @keyframes show{
     0%, 50%{
         opacity: 0;
@@ -133,3 +150,12 @@
         opacity: 1;
     }
 }
+@keyframes move-right{
+    0%, 100%{
+        left: 0;
+    }
+    50%{
+        left: calc(100% - 50px);
+    }
+}
+/* Start Animation */
