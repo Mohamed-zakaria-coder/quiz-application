@@ -46,6 +46,7 @@
     padding: 10px 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .quiz-container .spans-count {
     display: flex;
@@ -83,7 +84,7 @@
     color: white;
     background-color: #1caed6;
     border: none;
-
+    cursor: pointer;
 }
 .spans-parent span{
     width: 20px;
@@ -113,6 +114,7 @@
     color: white;
     padding: 20px 30px;
     font-size: 25px;
+    cursor: pointer;
 }
 .start-page .top-svg{
     position: absolute;
