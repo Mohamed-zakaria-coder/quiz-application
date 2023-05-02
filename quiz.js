@@ -1,3 +1,26 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+  import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js'
+  import { collection, getDocs } from  "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBSfvnJKhpvOzc4HbqAkth12ITPH7VXCLE",
+    authDomain: "quiz-app-6ce28.firebaseapp.com",
+    projectId: "quiz-app-6ce28",
+    storageBucket: "quiz-app-6ce28.appspot.com",
+    messagingSenderId: "313701120273",
+    appId: "1:313701120273:web:e1c5b616fb82c9922874b0",
+    measurementId: "G-FJ0PXNKXL3"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+ export  const db = getFirestore()
+ const colRef = collection(db, "quiz-docs")
+ 
+
+// Start Variables
 let category = document.querySelector(".category");
 let questionsNumber = document.querySelector(".questions-number");
 let submitBtn = document.querySelector(".submit-answer");
@@ -14,7 +37,7 @@ let countDownSpan = document.querySelector(".countdown span");
 
 let index = 0;
 let points = 0;
-countDownSpan.innerHTML = "12.00";
+countDownSpan.innerHTML = "32.00";
 page.style.cssText =
   "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)";
 page.style.display = "none";
@@ -25,11 +48,22 @@ loading.className = "loading"
 loading.style.cssText =
   "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 5px 10px; color:white; font-size: 24px;";
 document.body.appendChild(loading);
-fetch(
-  "https://the-trivia-api.com/api/questions?categories=sport_and_leisure&limit=5"
-)
-  .then((res) => res.json())
-  .then((data) => {
+// fetch(
+//   "https://the-trivia-api.com/api/questions?categories=sport_and_leisure&limit=5"
+// )
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data)
+let data;
+getDocs(colRef).then((snapshot) => {
+  let quizDocs = []
+  snapshot.docs.forEach(doc => {
+      quizDocs.push(doc.data())
+  })
+  console.log(quizDocs[0].data)
+  data = quizDocs[0].data
+  
+
     if (!data) {
     } else {
       loading.style.display = "none";
@@ -48,7 +82,7 @@ fetch(
       
       };
       let countDownText = setInterval(countDown, 1000)
-     
+      let spans
       for (let i = 0; i < data.length; i++) {
         spans = document.createElement("span");
 
@@ -103,7 +137,7 @@ fetch(
             inputs[0].checked = true
           index++;
           Quiz();
-          countDownSpan.innerHTML = 10
+          countDownSpan.innerHTML = 30
           if(index === data.length){
             countdown.remove()
           }
@@ -126,4 +160,8 @@ fetch(
         }
       });
     }
-  });
+  }).catch(err => console.log(err.message));
+
+  
+  
+
