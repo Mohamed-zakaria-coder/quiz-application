@@ -1,27 +1,32 @@
-.page{
+.page {
     animation: show 1.5s linear;
 }
+
 .quiz-container {
     width: 600px;
     margin: 20px auto;
     background-color: #eee;
     padding: 20px;
 }
-@media(max-width: 767px){
-    .quiz-container{
-       max-width: 400px;
+
+@media(max-width: 767px) {
+    .quiz-container {
+        max-width: 400px;
     }
 }
-@media(max-width: 480px){
-    .quiz-container{
-       max-width: 300px;
+
+@media(max-width: 480px) {
+    .quiz-container {
+        max-width: 300px;
     }
 }
-@media(max-width: 350px){
-    .quiz-container{
-       max-width: 200px;
+
+@media(max-width: 350px) {
+    .quiz-container {
+        max-width: 200px;
     }
 }
+
 .quiz-container .category-count {
     display: flex;
     justify-content: space-between;
@@ -31,6 +36,7 @@
     margin-bottom: 20px;
     border-radius: 10px;
 }
+
 .quiz-container .quiz {
     background-color: white;
     border-radius: 10px;
@@ -48,6 +54,7 @@
     margin-bottom: 20px;
     cursor: pointer;
 }
+
 .quiz-container .spans-count {
     display: flex;
     align-items: center;
@@ -59,24 +66,28 @@
 .quiz-container .quiz-answers {
     margin: 20px;
     background-color: #eee;
-    
+
 }
-.quiz-container .quiz-answers > div{
+
+.quiz-container .quiz-answers>div {
     display: flex;
     align-items: center;
     gap: 5px;
     padding: 15px 5px;
     border-bottom: 1px solid #ddd;
 }
-.quiz-container .quiz-answers > div input:checked + label{
+
+.quiz-container .quiz-answers>div input:checked+label {
     color: #1caed6;
 }
-.correctly{
+
+.correctly {
     text-align: center;
     background-color: white;
     padding: 10px;
 }
-.redo{
+
+.redo {
     display: block;
     width: fit-content;
     margin: 20px auto;
@@ -86,24 +97,28 @@
     border: none;
     cursor: pointer;
 }
-.spans-parent span{
+
+.spans-parent span {
     width: 20px;
-    height:20px;
+    height: 20px;
     background-color: #eee;
     margin-right: 4px;
 
     border-radius: 50%;
     display: inline-flex
 }
-.countdown{
+
+.countdown {
     font-size: 30px;
 }
-.start-pageP{
+
+.start-pageP {
     width: 100vw;
     height: 100vh;
     position: relative;
 }
-.start-page .start-quiz{
+
+.start-page .start-quiz {
     display: block;
     position: absolute;
     top: 50%;
@@ -116,22 +131,26 @@
     font-size: 25px;
     cursor: pointer;
 }
-.start-page .top-svg{
+
+.start-page .top-svg {
     position: absolute;
     top: 0;
     left: 0;
 }
-.start-page .bottom-svg{
+
+.start-page .bottom-svg {
     position: absolute;
     bottom: 0;
     left: 0;
 }
+
 /* Start Loading */
-.loading{
+.loading {
     mix-blend-mode: difference;
     background-color: #ddd;
 }
-.loading::before{
+
+.loading::before {
     content: "";
     position: absolute;
     width: 50px;
@@ -142,22 +161,31 @@
     z-index: -1;
     animation: move-right linear 2s infinite;
 }
+
 /* End Loading */
 /* Start Animation */
-@keyframes show{
-    0%, 50%{
+@keyframes show {
+
+    0%,
+    50% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-@keyframes move-right{
-    0%, 100%{
+
+@keyframes move-right {
+
+    0%,
+    100% {
         left: 0;
     }
-    50%{
+
+    50% {
         left: calc(100% - 50px);
     }
 }
+
 /* Start Animation */
