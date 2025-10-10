@@ -8,7 +8,6 @@ Designed with smooth UI waves and simple navigation — perfect for testing your
 ## 🌟 Features  
 
 ✅ **Start Screen Animation** – Elegant wave SVG design for a modern look.  
-✅ **Dynamic Questions** – Add or edit quiz questions easily in JavaScript.  
 ✅ **Score Tracking** – Calculates your score and displays the result instantly.  
 ✅ **Responsive Design** – Looks great on desktop, tablet, and mobile.  
 ✅ **Lightweight & Fast** – Built with vanilla JS, no frameworks needed.  
@@ -18,11 +17,8 @@ Designed with smooth UI waves and simple navigation — perfect for testing your
 ## 🧠 How It Works
 
 ✅ Click “Start A Quiz” to begin.
-
 ✅ Each question has multiple options — pick one!
-
 ✅ Once finished, your score is instantly shown.
-
 ✅ You can restart and try again anytime.
 
 
