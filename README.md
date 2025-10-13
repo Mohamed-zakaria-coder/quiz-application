@@ -29,6 +29,6 @@ This application is built using the foundational core web technologies:
 
 * **HTML5:** Structure and semantic content.
 * **CSS3:** Styling, including **Flexbox** for responsive layout and custom properties for a clean theme.
-* **JavaScript (ES6+):** Core logic, quiz flow, and efficient DOM manipulation.
+* **JavaScript:** Core logic, quiz flow, and efficient DOM manipulation.
 
 
