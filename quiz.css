@@ -1,191 +1,193 @@
 .page {
-    animation: show 1.5s linear;
+  animation: show 1.5s linear;
 }
 
 .quiz-container {
-    width: 600px;
-    margin: 20px auto;
-    background-color: #eee;
-    padding: 20px;
+  width: 600px;
+  margin: 20px auto;
+  background-color: #eee;
+  padding: 20px;
 }
 
-@media(max-width: 767px) {
-    .quiz-container {
-        max-width: 400px;
-    }
+@media (max-width: 767px) {
+  .quiz-container {
+    max-width: 400px;
+  }
 }
 
-@media(max-width: 480px) {
-    .quiz-container {
-        max-width: 300px;
-    }
+@media (max-width: 480px) {
+  .quiz-container {
+    max-width: 300px;
+  }
 }
 
-@media(max-width: 350px) {
-    .quiz-container {
-        max-width: 200px;
-    }
+@media (max-width: 350px) {
+  .quiz-container {
+    max-width: 200px;
+  }
 }
 
 .quiz-container .category-count {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .quiz-container .quiz {
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .quiz-container .submit-answer {
-    display: block;
-    background-color: #1caed6;
-    border: none;
-    color: white;
-    width: 100%;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
+  display: block;
+  background-color: #1caed6;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .quiz-container .spans-count {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  justify-content: space-between;
 }
 
 .quiz-container .quiz-answers {
-    margin: 20px;
-    background-color: #eee;
-
+  margin: 20px;
+  background-color: #eee;
 }
 
-.quiz-container .quiz-answers>div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 15px 5px;
-    border-bottom: 1px solid #ddd;
+.quiz-container .quiz-answers > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  border-bottom: 1px solid #ddd;
+}
+.quiz-container .quiz-answers > div > label {
+  width: 100%;
+  height: 100%;
+  padding: 15px 5px;
 }
 
-.quiz-container .quiz-answers>div input:checked+label {
-    color: #1caed6;
+.quiz-container .quiz-answers > div input:checked + label {
+  color: #1caed6;
 }
 
 .correctly {
-    text-align: center;
-    background-color: white;
-    padding: 10px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
 }
 
 .redo {
-    display: block;
-    width: fit-content;
-    margin: 20px auto;
-    padding: 5px 10px;
-    color: white;
-    background-color: #1caed6;
-    border: none;
-    cursor: pointer;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 5px 10px;
+  color: white;
+  background-color: #1caed6;
+  border: none;
+  cursor: pointer;
 }
 
 .spans-parent span {
-    width: 20px;
-    height: 20px;
-    background-color: #eee;
-    margin-right: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  margin-right: 4px;
 
-    border-radius: 50%;
-    display: inline-flex
+  border-radius: 50%;
+  display: inline-flex;
 }
 
 .countdown {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .start-pageP {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .start-page .start-quiz {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-decoration: none;
-    background-color: #1caed6;
-    color: white;
-    padding: 20px 30px;
-    font-size: 25px;
-    cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  background-color: #1caed6;
+  color: white;
+  padding: 20px 30px;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .start-page .top-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .start-page .bottom-svg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* Start Loading */
 .loading {
-    mix-blend-mode: difference;
-    background-color: #ddd;
+  mix-blend-mode: difference;
+  background-color: #ddd;
 }
 
 .loading::before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 100%;
-    background-color: black;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    animation: move-right linear 2s infinite;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: move-right linear 2s infinite;
 }
 
 /* End Loading */
 /* Start Animation */
 @keyframes show {
+  0%,
+  50% {
+    opacity: 0;
+  }
 
-    0%,
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes move-right {
+  0%,
+  100% {
+    left: 0;
+  }
 
-    0%,
-    100% {
-        left: 0;
-    }
-
-    50% {
-        left: calc(100% - 50px);
-    }
+  50% {
+    left: calc(100% - 50px);
+  }
 }
 
 /* Start Animation */
