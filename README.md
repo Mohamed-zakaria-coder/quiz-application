@@ -21,4 +21,14 @@ Designed with smooth UI waves and simple navigation — perfect for testing your
 ✅ Once finished, your score is instantly shown.
 ✅ You can restart and try again anytime.
 
+---
+
+## 🛠️ Tech Stack
+
+This application is built using the foundational core web technologies:
+
+* **HTML5:** Provides the **structural backbone** and organizes all of the application's content.
+* **CSS3:** Handles styling, leveraging **Flexbox** for a responsive and professional layout.
+* **JavaScript:** Core logic, quiz flow, and efficient DOM manipulation.
+
 
