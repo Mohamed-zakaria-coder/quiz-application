@@ -63,7 +63,7 @@ getDocs(colRef)
     snapshot.docs.forEach((doc) => {
       quizDocs.push(doc.data());
     });
-    console.log(quizDocs[0].data);
+   
     data = quizDocs[0].data;
 
     if (!data) {
@@ -96,7 +96,6 @@ getDocs(colRef)
         });
         let randomNumber = Math.floor(Math.random() * 3);
         if (data[index]) {
-          console.log(data[index].correctAnswer);
           for (let i = 0; i <= 2; i++) {
             myArr.push(
               (label[i].textContent = data[index].incorrectAnswers[i])
