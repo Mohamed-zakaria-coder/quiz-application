@@ -7,10 +7,10 @@ Designed with smooth UI waves and simple navigation — perfect for testing your
 
 ## 🌟 Features  
 
-✅ **Start Screen Animation** – Elegant wave SVG design for a modern look.  
-✅ **Score Tracking** – Calculates your score and displays the result instantly.  
-✅ **Responsive Design** – Looks great on desktop, tablet, and mobile.  
-✅ **Lightweight & Fast** – Built with vanilla JS, no frameworks needed.  
+**Smooth Start Screen:** Styled with dynamic SVG waves and soft entrance animations.✅ 
+**Score Tracking** – Calculates your score and displays the result instantly.✅ 
+**Responsive Design** – Looks great on desktop, tablet, and mobile.✅ 
+**Lightweight & Fast** – Built with vanilla JS, no frameworks needed.✅ 
 
 ---
 
